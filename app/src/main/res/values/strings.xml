@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">#ЧТОПОСМОТРЕТЬ?</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">О нас</string>
+
+    <string name="menu_movies">Фильмы</string>
+    <string name="menu_serials">Сериалы</string>
+    <string name="menu_anime">Аниме</string>
+    <string name="menu_cart">Мультфильмы</string>
+    <string name="menu_tools">Настройки</string>
+    <string name="menu_want">Хочу посмотреть</string>
+    <string name="menu_done">Просмотрено</string>
+    <string name="menu_shop">Магазин</string>
+    <string name="menu_share">Поделиться</string>
+    <string name="menu_send">Send</string>
+</resources>
