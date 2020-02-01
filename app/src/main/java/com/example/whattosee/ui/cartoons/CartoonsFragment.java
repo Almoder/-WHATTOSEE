@@ -4,31 +4,49 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
+import com.example.whattosee.Items;
 import com.example.whattosee.R;
+import com.example.whattosee.StateAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class CartoonsFragment extends ListFragment {
 
-    private CartoonsViewModel doneViewModel;
 
+    private List<Items> items = new ArrayList();
 
-    String data[] = new String[] { "one", "two", "three", "four" };
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, data);
-        setListAdapter(adapter);
+
+        setInitialData();
+
+        StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
+
+        setListAdapter(stateAdapter);
+
     }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_cartoons, container, false);
+    }
+
+    private void setInitialData(){
+
+        items.add(new Items ("Стальной гигант", "-", R.mipmap.ic_launcher2));
+        items.add(new Items ("ВАЛЛ·И", "-", R.mipmap.ic_launcher2));
+        items.add(new Items ("Корпорация монстров", "-", R.mipmap.ic_launcher2));
+        items.add(new Items ("Труп Невесты", "-", R.mipmap.ic_launcher2));
+
+    }
+
 }
