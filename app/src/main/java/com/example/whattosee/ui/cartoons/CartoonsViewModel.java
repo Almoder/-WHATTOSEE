@@ -11,7 +11,7 @@ public class CartoonsViewModel extends ViewModel {
 
     public CartoonsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("###Какой-то список Мультфильмов###");
+        mText.setValue("###хер###");
     }
 
     public LiveData<String> getText() {

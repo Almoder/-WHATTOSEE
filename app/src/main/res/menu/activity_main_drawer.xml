@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+xmlns:tools="http://schemas.android.com/tools"
+tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_movies"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_movies" />
-        <item
-            android:id="@+id/nav_serials"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_serials" />
-        <item
-            android:id="@+id/nav_cartoons"
-            android:icon="@drawable/ic_child_care_black_24dp"
-            android:title="@string/menu_cart" />
-        <item
-            android:id="@+id/nav_anime"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_anime" />
-        <item
-            android:id="@+id/nav_wanttosee"
-            android:icon="@drawable/ic_filter_center_focus_black_24dp"
-            android:title="@string/menu_want" />
-        <item
-            android:id="@+id/nav_done"
-            android:icon="@drawable/ic_done_black_24dp"
-            android:title="@string/menu_done" />
-        <item
-            android:id="@+id/nav_shop"
-            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
-            android:title="@string/menu_shop" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
-    </group>
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_movies"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/menu_movies" />
+    <item
+        android:id="@+id/nav_serials"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="@string/menu_serials" />
+    <item
+        android:id="@+id/nav_cartoons"
+        android:icon="@drawable/ic_child_care_black_24dp"
+        android:title="@string/menu_cart" />
+    <item
+        android:id="@+id/nav_anime"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="@string/menu_anime" />
+    <item
+        android:id="@+id/nav_wanttosee"
+        android:icon="@drawable/ic_filter_center_focus_black_24dp"
+        android:title="@string/menu_want" />
+    <item
+        android:id="@+id/nav_done"
+        android:icon="@drawable/ic_done_black_24dp"
+        android:title="@string/menu_done" />
+    <item
+        android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+        android:title="@string/menu_shop" />
+    <item
+        android:id="@+id/nav_tools"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="@string/menu_tools" />
+</group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
-        </menu>
-    </item>
+<item android:title="Communicate">
+    <menu>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/menu_share" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_send" />
+    </menu>
+</item>
 
 </menu>
