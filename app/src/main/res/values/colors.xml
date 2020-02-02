@@ -3,4 +3,5 @@
     <color name="colorPrimary">#3A1363</color>
     <color name="colorPrimaryDark">#3A1363</color>
     <color name="colorAccent">#5E0988</color>
+    <color name="CLR">@drawable/color</color>
 </resources>

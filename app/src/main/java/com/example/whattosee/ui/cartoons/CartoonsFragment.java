@@ -1,43 +1,30 @@
 package com.example.whattosee.ui.cartoons;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
-
 import com.example.whattosee.About;
 import com.example.whattosee.Items;
 import com.example.whattosee.R;
 import com.example.whattosee.StateAdapter;
-import com.example.whattosee.ui.anime.AnimeFragment;
 import com.example.whattosee.ui.done.DoneFragment;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class CartoonsFragment extends ListFragment {
-    FragmentManager Fra;
-    final static String TAG_1 = "FRAGMENT_1";
 
     private List<Items> items = new ArrayList();
-
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         setInitialData();
-
         StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
-
         setListAdapter(stateAdapter);
 
     }
@@ -66,15 +53,12 @@ public class CartoonsFragment extends ListFragment {
                     Intent intent1 = new Intent(getActivity(), About.class);
                     intent1.putExtra("buttonIndex", position);
                     startActivity(intent1);
-                } else {
-                    // Выводим нужную информацию
-
                 }
+                else { }
                 break;
             case 1:
-                intent = new Intent(getActivity(), AnimeFragment.class); //Заполняем Intent
-                startActivity(intent);
                 break;
+                default: break;
         }
         //Запускаем активность
     }

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment1">
-
     <TextView
         android:id="@+id/text_done"
         android:layout_width="match_parent"

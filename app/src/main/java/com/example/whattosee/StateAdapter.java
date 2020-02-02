@@ -8,8 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.whattosee.ui.cartoons.CartoonsFragment;
-
 import java.util.List;
 
 public class StateAdapter extends ArrayAdapter<Items> {
