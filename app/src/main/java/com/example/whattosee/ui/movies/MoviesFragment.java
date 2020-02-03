@@ -1,35 +1,82 @@
 package com.example.whattosee.ui.movies;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.ListFragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.whattosee.About;
+import com.example.whattosee.Items;
 import com.example.whattosee.R;
+import com.example.whattosee.StateAdapter;
+import com.example.whattosee.ui.done.DoneFragment;
 
-public class MoviesFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
 
-    private MoviesViewModel moviesViewModel;
+public class MoviesFragment extends ListFragment {
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        moviesViewModel =
-                ViewModelProviders.of(this).get(MoviesViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_movies, container, false);
-        final TextView textView = root.findViewById(R.id.text_movies);
-        moviesViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+    private List<Items> items = new ArrayList();
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        setInitialData();
+        StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
+        setListAdapter(stateAdapter);
+
     }
-}
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_movies, container, false);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Intent intent;
+        switch (position) {
+            case 0:
+                // подключаем FragmentManager
+                FragmentManager fragmentManager = getFragmentManager();
+
+                // Получаем ссылку на второй фрагмент по ID
+                DoneFragment fragment2 = (DoneFragment) fragmentManager
+                        .findFragmentById(R.id.fragment1);
+                if (fragment2 == null || !fragment2.isVisible()) {
+                    // запускаем активность
+                    Intent intent1 = new Intent(getActivity(), About.class);
+                    intent1.putExtra("buttonIndex", position);
+                    startActivity(intent1);
+                }
+                else { }
+                break;
+            case 1:
+                break;
+            default: break;
+        }
+        //Запускаем активность
+    }
+
+    private void setInitialData(){
+
+
+
+    }
+
+ }
