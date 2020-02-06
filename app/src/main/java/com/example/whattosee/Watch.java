@@ -2,14 +2,19 @@ package com.example.whattosee;
 
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -19,7 +24,8 @@ import com.google.android.gms.ads.rewarded.RewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
 /** Main Activity. Inflates main activity xml. */
-public class Watch extends Activity {
+public class Watch extends AppCompatActivity {
+    private AdView adView1;
     private static final String AD_UNIT_ID = "ca-app-pub-9595963256137742/6406704403";
     private static final long COUNTER_TIME = 10;
     private static final int GAME_OVER_REWARD = 1;
@@ -40,12 +46,21 @@ public class Watch extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_watch);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
+        adView1 = findViewById(R.id.ad_view2);
 
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        // Start loading the ad in the background.
+        adView1.loadAd(adRequest);
         loadRewardedAd();
 
         // Create the "retry" button, which tries to show a rewarded ad between game plays.
@@ -79,7 +94,18 @@ public class Watch extends Activity {
     }
 
     @Override
+    public void onDestroy() {
+        if (adView1 != null) {
+            adView1.destroy();
+        }
+        super.onDestroy();
+    }
+
+    @Override
     public void onPause() {
+        if (adView1 != null) {
+            adView1.pause();
+        }
         super.onPause();
         pauseGame();
     }
@@ -89,6 +115,9 @@ public class Watch extends Activity {
         super.onResume();
         if (!gameOver && gamePaused) {
             resumeGame();
+        }
+        if (adView1 != null) {
+            adView1.resume();
         }
     }
 
@@ -209,6 +238,16 @@ public class Watch extends Activity {
                         }
                     };
             rewardedAd.show(this, adCallback);
+        }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
