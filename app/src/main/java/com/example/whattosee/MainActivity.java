@@ -2,34 +2,27 @@ package com.example.whattosee;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.example.whattosee.ui.tools.ToolsFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.widget.Button;
-import android.widget.TextView;
-
 public class MainActivity extends AppCompatActivity {
+
+    private AdView adView;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -52,6 +45,19 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+        });
+
+        adView = findViewById(R.id.ad_view);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        // Start loading the ad in the background.
+        adView.loadAd(adRequest);
     }
 
     @Override
@@ -78,6 +84,32 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    /** Called when returning to the activity */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    /** Called before the activity is destroyed */
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 
 }

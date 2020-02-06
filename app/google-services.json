@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "38182520478",
+    "firebase_url": "https://whattosee-76dbd.firebaseio.com",
+    "project_id": "whattosee-76dbd",
+    "storage_bucket": "whattosee-76dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38182520478:android:bb2f76cd59a11f6f561d8f",
+        "android_client_info": {
+          "package_name": "com.example.whattosee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38182520478-9eurfb06ivip9tfs4h5eklgf82d4mv5s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whattosee",
+            "certificate_hash": "2123281672a34f00d4180b6dcfe9eaa3629219e3"
+          }
+        },
+        {
+          "client_id": "38182520478-lcm2aeeoag7pfi1ro8898r40hp2m1f8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Q23VzbwWFQQ4iwpKL4cVVNtAoKRhygQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38182520478-lcm2aeeoag7pfi1ro8898r40hp2m1f8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

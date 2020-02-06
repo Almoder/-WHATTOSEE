@@ -1,13 +1,21 @@
 package com.example.whattosee;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class About extends AppCompatActivity {
+    private AdView adView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +27,18 @@ public class About extends AppCompatActivity {
         Intent intent = getIntent();
         // Получение номера нажатого элемента списка
         int buttonIndex = intent.getIntExtra("buttonIndex", -1);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+        });
+        adView = findViewById(R.id.ad_view1);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        // Start loading the ad in the background.
+        adView.loadAd(adRequest);
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -29,5 +49,31 @@ public class About extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    /** Called when returning to the activity */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    /** Called before the activity is destroyed */
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 }

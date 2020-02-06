@@ -19,4 +19,13 @@
     <string name="menu_send">Send</string>
     <string name="empty">Список пуст</string>
 
+    <string name="banner_ad_unit_id">ca-app-pub-9595963256137742/2254323512</string>
+    <string name="banner_ad_unit_id1">ca-app-pub-9595963256137742/9940176185</string>
+
+    <string name="impossible_game">Получи монеты за рекламу</string>
+    <string name="retry_button_text">Подождать ещё</string>
+    <string name="watch_video_button_text">Посмотерь видео за 100 монет</string>
+    <string name="default_coin_text">Coins: 0</string>
+
+
 </resources>

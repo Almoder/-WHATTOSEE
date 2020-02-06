@@ -58,7 +58,7 @@ public class CartoonsFragment extends ListFragment {
                 break;
             case 1:
                 break;
-                default: break;
+            default: break;
         }
         //Запускаем активность
     }

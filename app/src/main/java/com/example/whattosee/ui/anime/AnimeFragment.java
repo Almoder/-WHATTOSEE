@@ -6,15 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.whattosee.About;
 import com.example.whattosee.Items;
@@ -36,6 +30,7 @@ public class AnimeFragment extends ListFragment {
         setInitialData();
         StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
         setListAdapter(stateAdapter);
+
 
     }
 
