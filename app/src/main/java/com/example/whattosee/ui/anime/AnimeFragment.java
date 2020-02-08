@@ -74,7 +74,6 @@ public class AnimeFragment extends ListFragment {
 
 
     private void setInitialData(){
-        items.add(new Items ("Бразилия", "Бразилиа", R.drawable.ic_child_care_black_24dp));
 
 
     }
