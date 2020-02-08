@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3A1363</color>
-    <color name="colorPrimaryDark">#3A1363</color>
-    <color name="colorAccent">#5E0988</color>
+    <color name="colorPrimary">#660756</color>
+    <color name="colorPrimaryDark">#660756</color>
+    <color name="colorAccent">#660756</color>
     <color name="Black">#000</color>
     <color name="CLR">@drawable/color</color>
 </resources>

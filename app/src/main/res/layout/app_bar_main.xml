@@ -14,10 +14,11 @@
 
         <include
             layout="@layout/content_main"
-            android:layout_width="395dp"
-            android:layout_height="570dp"
+            android:layout_width="fill_parent"
+            android:layout_height="623dp"
             android:background="@drawable/color"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout3" />
 

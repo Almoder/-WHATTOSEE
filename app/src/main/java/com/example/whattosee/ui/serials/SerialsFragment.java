@@ -6,17 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
-import com.example.whattosee.About;
+import com.example.whattosee.ContentActivity;
 import com.example.whattosee.Items;
 import com.example.whattosee.R;
 import com.example.whattosee.StateAdapter;
@@ -50,6 +44,7 @@ public class SerialsFragment  extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         Intent intent;
+        String INDV = "C";
         switch (position) {
             case 0:
                 // подключаем FragmentManager
@@ -60,8 +55,9 @@ public class SerialsFragment  extends ListFragment {
                         .findFragmentById(R.id.fragment1);
                 if (fragment2 == null || !fragment2.isVisible()) {
                     // запускаем активность
-                    Intent intent1 = new Intent(getActivity(), About.class);
-                    intent1.putExtra("buttonIndex", position);
+                    Intent intent1 = new Intent(getActivity(), ContentActivity.class);
+                    INDV = INDV + position;
+                    intent1.putExtra("Part", INDV);
                     startActivity(intent1);
                 }
                 else { }

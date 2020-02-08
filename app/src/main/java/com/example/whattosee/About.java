@@ -15,7 +15,8 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class About extends AppCompatActivity {
     private AdView adView;
-
+    String INF;
+    int IDnTF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,8 @@ public class About extends AppCompatActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
-        // Получение номера нажатого элемента списка
-        int buttonIndex = intent.getIntExtra("buttonIndex", -1);
+        INF = intent.getStringExtra("Part");
+        System.out.println(INF);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {}

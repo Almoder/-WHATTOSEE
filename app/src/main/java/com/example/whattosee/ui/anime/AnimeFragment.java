@@ -10,7 +10,7 @@ import android.widget.ListView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
 
-import com.example.whattosee.About;
+import com.example.whattosee.ContentActivity;
 import com.example.whattosee.Items;
 import com.example.whattosee.R;
 import com.example.whattosee.StateAdapter;
@@ -43,6 +43,7 @@ public class AnimeFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
+        String INDV = "A";
         super.onListItemClick(l, v, position, id);
         Intent intent;
         switch (position) {
@@ -55,8 +56,10 @@ public class AnimeFragment extends ListFragment {
                         .findFragmentById(R.id.fragment1);
                 if (fragment2 == null || !fragment2.isVisible()) {
                     // запускаем активность
-                    Intent intent1 = new Intent(getActivity(), About.class);
-                    intent1.putExtra("buttonIndex", position);
+                    Intent intent1 = new Intent(getActivity(), ContentActivity.class);
+                    INDV = INDV + position;
+                    intent1.putExtra("Part", INDV);
+
                     startActivity(intent1);
                 }
                 else { }
@@ -71,7 +74,7 @@ public class AnimeFragment extends ListFragment {
 
 
     private void setInitialData(){
-
+        items.add(new Items ("Бразилия", "Бразилиа", R.drawable.ic_child_care_black_24dp));
 
 
     }

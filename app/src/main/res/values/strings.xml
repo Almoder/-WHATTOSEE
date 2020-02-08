@@ -27,5 +27,17 @@
     <string name="watch_video_button_text">Посмотерь видео за 100 монет</string>
     <string name="default_coin_text">Coins: 0</string>
 
+    <string name="Title">Название фильма</string>
+    <string name="Title1">Название: </string>
+    <string name="Year">Год выпуска: </string>
+    <string name="Country">Страна: </string>
+    <string name="Genres">Жанр: </string>
+    <string name="Duration">Продолжительность: </string>
+    <string name="RatingIMDB">Рейтинг IMDB: </string>
+    <string name="RatingKinoPoisk">Рейтинг Кинопоиск: </string>
+    <string name="Producer">Режиссер: </string>
+    <string name="Cast">В ролях: </string>
+    <string name="Discription">Описание: \n</string>
+
 
 </resources>

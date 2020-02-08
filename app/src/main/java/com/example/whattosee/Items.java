@@ -1,9 +1,10 @@
 package com.example.whattosee;
 
 public class Items {
-    private String name; // название
-    private String discription;  // столица
-    private int ItemResource; // ресурс флага
+    private String name;
+    private String discription;
+    private int ItemResource;
+
 
     public Items(String name, String discription, int Res){
 
@@ -19,6 +20,7 @@ public class Items {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getDiscription() {
         return this.discription;
     }
