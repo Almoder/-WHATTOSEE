@@ -1,7 +1,6 @@
 package com.example.whattosee;
 
 
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MenuItem;
@@ -18,6 +17,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdCallback;
@@ -35,7 +35,7 @@ public class Watch extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean gameOver;
     private boolean gamePaused;
-
+    private RewardedVideoAd mRewardedVideoAd;
     private RewardedAd rewardedAd;
     private Button retryButton;
     private Button showVideoButton;
@@ -55,7 +55,7 @@ public class Watch extends AppCompatActivity {
             }
         });
         adView1 = findViewById(R.id.ad_view2);
-
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
 
@@ -82,6 +82,9 @@ public class Watch extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         showRewardedVideo();
+                        if (mRewardedVideoAd.isLoaded()) {
+                            mRewardedVideoAd.show();
+                        }
                     }
                 });
 
@@ -98,7 +101,9 @@ public class Watch extends AppCompatActivity {
         if (adView1 != null) {
             adView1.destroy();
         }
+        mRewardedVideoAd.destroy(this);
         super.onDestroy();
+
     }
 
     @Override
@@ -107,6 +112,7 @@ public class Watch extends AppCompatActivity {
             adView1.pause();
         }
         super.onPause();
+        mRewardedVideoAd.pause(this);
         pauseGame();
     }
 
@@ -119,6 +125,7 @@ public class Watch extends AppCompatActivity {
         if (adView1 != null) {
             adView1.resume();
         }
+        mRewardedVideoAd.resume(this);
     }
 
     private void pauseGame() {
@@ -165,6 +172,7 @@ public class Watch extends AppCompatActivity {
         // Hide the retry button, load the ad, and start the timer.
         retryButton.setVisibility(View.INVISIBLE);
         showVideoButton.setVisibility(View.INVISIBLE);
+        mRewardedVideoAd.loadAd(AD_UNIT_ID, new AdRequest.Builder().build());
         if (!rewardedAd.isLoaded() && !isLoading) {
             loadRewardedAd();
         }
@@ -221,6 +229,7 @@ public class Watch extends AppCompatActivity {
                             Toast.makeText(Watch.this, "onRewardedAdClosed", Toast.LENGTH_SHORT).show();
                             // Preload the next video ad.
                             Watch.this.loadRewardedAd();
+                            loadRewardedAd();
                         }
 
                         @Override
@@ -236,6 +245,9 @@ public class Watch extends AppCompatActivity {
                             Toast.makeText(Watch.this, "onRewardedAdFailedToShow", Toast.LENGTH_SHORT)
                                     .show();
                         }
+                        
+
+
                     };
             rewardedAd.show(this, adCallback);
         }

@@ -31,5 +31,6 @@ public class ShareFragment extends Fragment {
             }
         });
         return root;
+
     }
 }
