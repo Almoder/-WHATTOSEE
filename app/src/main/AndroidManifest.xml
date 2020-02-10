@@ -8,16 +8,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher2_round"
+        android:roundIcon="@mipmap/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".GoogleSignInActivity"
+            android:theme="@style/AppTheme.NoActionBar1"></activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9595963256137742~6768283592" />
+
         <activity
             android:name=".ContentActivity"
-            android:theme="@style/AppTheme1">
-    </activity>
+            android:theme="@style/AppTheme1"></activity>
         <activity
             android:name=".Watch"
             android:label=""
@@ -28,8 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splash"
             android:theme="@style/splash">
@@ -39,6 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Sign"
+            android:theme="@style/AppTheme.NoActionBar1"></activity>
     </application>
 
 </manifest>

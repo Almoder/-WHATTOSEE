@@ -60,5 +60,10 @@
         android:name="com.example.whattosee.ui.WantToSee.WantToSeeFragment"
         android:label="@string/menu_want"
         tools:layout="@layout/fragment_wanttosee" />
+    <fragment
+        android:id="@+id/nav_sign"
+        android:name="com.example.whattosee.ui.Sign.SingFragment"
+        android:label="Esa"
+        tools:layout="@layout/fragment_share" />
 
 </navigation>

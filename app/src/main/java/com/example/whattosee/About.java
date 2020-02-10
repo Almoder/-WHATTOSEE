@@ -46,6 +46,7 @@ public class About extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
+                System.gc();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
