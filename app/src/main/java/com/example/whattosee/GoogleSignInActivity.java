@@ -104,6 +104,9 @@ public class GoogleSignInActivity extends BaseActivity implements
                 Log.w(TAG, "Google sign in failed", e);
                 // [START_EXCLUDE]
                 updateUI(null);
+                startActivity(intent);
+                finish();
+                System.gc();
                 // [END_EXCLUDE]
             }
         }

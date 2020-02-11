@@ -86,6 +86,7 @@ public class Sign extends BaseActivity implements
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Intent intent = new Intent(this, MainActivity.class);
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -93,7 +94,6 @@ public class Sign extends BaseActivity implements
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account);
-                Intent intent = new Intent(this, MainActivity.class);
                 startActivity (intent) ;
                 finish();
                 System.gc();
@@ -104,6 +104,9 @@ public class Sign extends BaseActivity implements
                 Log.w(TAG, "Google sign in failed", e);
                 // [START_EXCLUDE]
                 updateUI(null);
+                startActivity (intent) ;
+                finish();
+                System.gc();
                 // [END_EXCLUDE]
             }
         }
@@ -133,6 +136,7 @@ public class Sign extends BaseActivity implements
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
                             updateUI(null);
+
                         }
 
                         // [START_EXCLUDE]

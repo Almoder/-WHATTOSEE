@@ -31,6 +31,7 @@ public class Watch extends AppCompatActivity {
     private static final int GAME_OVER_REWARD = 1;
 
     private int coinCount;
+    private int a;
     private TextView coinCountText;
     private CountDownTimer countDownTimer;
     private boolean gameOver;
@@ -214,6 +215,7 @@ public class Watch extends AppCompatActivity {
 
     private void showRewardedVideo() {
         showVideoButton.setVisibility(View.INVISIBLE);
+        a = coinCount;
         if (rewardedAd.isLoaded()) {
             RewardedAdCallback adCallback =
                     new RewardedAdCallback() {
@@ -236,7 +238,11 @@ public class Watch extends AppCompatActivity {
                         public void onUserEarnedReward(RewardItem rewardItem) {
                             // User earned reward.
                             Toast.makeText(Watch.this, "onUserEarnedReward", Toast.LENGTH_SHORT).show();
-                            addCoins(rewardItem.getAmount());
+                            addCoins(100);
+                            if(coinCount == a || coinCount == (a + 1) )
+                            {
+                                addCoins(100);
+                            }
                         }
 
                         @Override
@@ -245,7 +251,7 @@ public class Watch extends AppCompatActivity {
                             Toast.makeText(Watch.this, "onRewardedAdFailedToShow", Toast.LENGTH_SHORT)
                                     .show();
                         }
-                        
+
 
 
                     };
