@@ -7,62 +7,62 @@
 
     <fragment
         android:id="@+id/nav_movies"
-        android:name="com.example.whattosee.ui.movies.MoviesFragment"
+        android:name="com.RaProject.whattosee.ui.movies.MoviesFragment"
         android:label="@string/menu_movies"
         tools:layout="@layout/fragment_movies" />
 
     <fragment
         android:id="@+id/nav_serials"
-        android:name="com.example.whattosee.ui.serials.SerialsFragment"
+        android:name="com.RaProject.whattosee.ui.serials.SerialsFragment"
         android:label="@string/menu_serials"
         tools:layout="@layout/fragment_serials" />
 
     <fragment
         android:id="@+id/nav_anime"
-        android:name="com.example.whattosee.ui.anime.AnimeFragment"
+        android:name="com.RaProject.whattosee.ui.anime.AnimeFragment"
         android:label="@string/menu_anime"
         tools:layout="@layout/fragment_anime" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.whattosee.ui.tools.ToolsFragment"
+        android:name="com.RaProject.whattosee.ui.tools.ToolsFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.whattosee.ui.share.ShareFragment"
+        android:name="com.RaProject.whattosee.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.whattosee.ui.send.SendFragment"
+        android:name="com.RaProject.whattosee.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
     <fragment
         android:id="@+id/nav_shop"
-        android:name="com.example.whattosee.ui.shop.ShopFragment"
+        android:name="com.RaProject.whattosee.ui.shop.ShopFragment"
         android:label="@string/menu_shop"
         tools:layout="@layout/fragment_shop" />
     <fragment
         android:id="@+id/nav_cartoons"
-        android:name="com.example.whattosee.ui.cartoons.CartoonsFragment"
+        android:name="com.RaProject.whattosee.ui.cartoons.CartoonsFragment"
         android:label="@string/menu_cart"
         tools:layout="@layout/fragment_cartoons" />
     <fragment
         android:id="@+id/nav_done"
-        android:name="com.example.whattosee.ui.done.DoneFragment"
+        android:name="com.RaProject.whattosee.ui.done.DoneFragment"
         android:label="@string/menu_done"
         tools:layout="@layout/fragment_done" />
     <fragment
         android:id="@+id/nav_wanttosee"
-        android:name="com.example.whattosee.ui.WantToSee.WantToSeeFragment"
+        android:name="com.RaProject.whattosee.ui.WantToSee.WantToSeeFragment"
         android:label="@string/menu_want"
         tools:layout="@layout/fragment_wanttosee" />
     <fragment
         android:id="@+id/nav_sign"
-        android:name="com.example.whattosee.ui.Sign.SingFragment"
+        android:name="com.RaProject.whattosee.ui.Sign.SingFragment"
         android:label="Esa"
         tools:layout="@layout/fragment_share" />
 

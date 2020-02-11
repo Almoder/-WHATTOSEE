@@ -8,6 +8,13 @@
     tools:context=".About"
     tools:ignore="MergeRootFrame">
 
+    <FrameLayout
+        android:id="@+id/dsa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +37,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="1dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-9595963256137742/2254323512" />
+        ads:adUnitId="ca-app-pub-9595963256137742/2254323512"
+        />
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.whattosee">
+    package="com.RaProject.whattosee">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,13 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleSignInActivity"
+        <activity android:name="com.RaProject.whattosee.GoogleSignInActivity"
             android:theme="@style/AppTheme.NoActionBar1"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9595963256137742~6768283592" />
-
         <activity
             android:name=".ContentActivity"
             android:theme="@style/AppTheme1"></activity>
@@ -33,6 +32,9 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".Sign"
+            android:theme="@style/AppTheme.NoActionBar1"></activity>
+        <activity
             android:name=".Splash"
             android:theme="@style/splash">
             <intent-filter>
@@ -41,9 +43,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Sign"
-            android:theme="@style/AppTheme.NoActionBar1"></activity>
     </application>
 
 </manifest>
