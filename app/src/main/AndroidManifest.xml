@@ -11,15 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.RaProject.whattosee.GoogleSignInActivity"
-            android:theme="@style/AppTheme.NoActionBar1"></activity>
+        <activity
+            android:name=".GoogleSignInActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9595963256137742~6768283592" />
+
         <activity
             android:name=".ContentActivity"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".Watch"
             android:label=""
@@ -33,7 +35,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Sign"
-            android:theme="@style/AppTheme.NoActionBar1"></activity>
+            android:theme="@style/AppTheme.NoActionBar1" />
         <activity
             android:name=".Splash"
             android:theme="@style/splash">

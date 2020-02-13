@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Start loading the ad in the background.
         adView.loadAd(adRequest);
+
     }
 
     @Override
@@ -150,5 +151,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GoogleSignInActivity.class);
         startActivity(intent);
     }
+
+
 
 }

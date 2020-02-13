@@ -14,7 +14,6 @@ import com.RaProject.whattosee.ContentActivity;
 import com.RaProject.whattosee.Items;
 import com.RaProject.whattosee.R;
 import com.RaProject.whattosee.StateAdapter;
-import com.RaProject.whattosee.ui.done.DoneFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,17 +51,12 @@ public class AnimeFragment extends ListFragment {
                 FragmentManager fragmentManager = getFragmentManager();
 
                 // Получаем ссылку на второй фрагмент по ID
-                DoneFragment fragment2 = (DoneFragment) fragmentManager
-                        .findFragmentById(R.id.fragment1);
-                if (fragment2 == null || !fragment2.isVisible()) {
                     // запускаем активность
                     Intent intent1 = new Intent(getActivity(), ContentActivity.class);
                     INDV = INDV + position;
                     intent1.putExtra("Part", INDV);
 
                     startActivity(intent1);
-                }
-                else { }
                 break;
             case 1:
                 break;

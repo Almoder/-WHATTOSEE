@@ -3,7 +3,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_100"
+    android:background="@drawable/auhtem"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -17,18 +17,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="564dp"
         android:layout_weight="3"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
-            style="@style/ThemeOverlay.FirebaseIcon"
             android:id="@+id/googleIcon"
-            android:contentDescription="@string/desc_firebase_lockup"
-            android:src="@drawable/firebase_lockup_400"
+            style="@style/ThemeOverlay.FirebaseIcon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="363dp"
+            android:layout_gravity="top"
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@drawable/company" />
 
         <TextView
             android:id="@+id/titleText"
@@ -52,7 +53,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="26dp"
         android:layout_weight="1"
         android:background="@color/grey_300">
 
@@ -77,20 +78,20 @@
 
             <Button
                 android:id="@+id/signOutButton"
-                android:layout_marginStart="@dimen/button_horizontal_margin"
-                android:layout_marginEnd="@dimen/button_horizontal_margin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:layout_marginEnd="@dimen/button_horizontal_margin"
                 android:layout_weight="1"
                 android:text="@string/sign_out"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
 
             <Button
                 android:id="@+id/disconnectButton"
-                android:layout_marginStart="@dimen/button_horizontal_margin"
-                android:layout_marginEnd="@dimen/button_horizontal_margin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:layout_marginEnd="@dimen/button_horizontal_margin"
                 android:layout_weight="1"
                 android:text="Exit"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
