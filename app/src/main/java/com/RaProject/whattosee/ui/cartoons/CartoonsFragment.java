@@ -71,7 +71,6 @@ public class CartoonsFragment extends ListFragment {
         });
 
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("8517241ED22D3087DBF2790B07628BED")
                 .build();
         interstitialAd.loadAd(adRequest);
 
