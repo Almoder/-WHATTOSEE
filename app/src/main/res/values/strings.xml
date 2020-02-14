@@ -27,7 +27,9 @@
     <string name="impossible_game">Получи монеты за рекламу</string>
     <string name="retry_button_text">Подождать ещё</string>
     <string name="watch_video_button_text">Посмотерь видео за 100 монет</string>
-    <string name="default_coin_text">Coins: 0</string>
+    <string name="default_coin_text">0</string>
+    <string name="buy_toast">Buy Toast</string>
+    <string name="hello_world">Hello World!</string>
 
     <string name="Title">Название фильма</string>
     <string name="Title1">Название: </string>

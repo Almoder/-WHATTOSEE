@@ -3,6 +3,7 @@
     package="com.RaProject.whattosee">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Cast"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".ShopMoney"
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".GoogleSignInActivity"
             android:theme="@style/AppTheme.NoActionBar1" />

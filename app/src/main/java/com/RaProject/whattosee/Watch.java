@@ -1,6 +1,7 @@
 package com.RaProject.whattosee;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MenuItem;
@@ -92,7 +93,7 @@ public class Watch extends AppCompatActivity {
         // Display current coin count to user.
         coinCountText = findViewById(R.id.coin_count_text);
         coinCount = 0;
-        coinCountText.setText("Coins: " + coinCount);
+        coinCountText.setText("" + coinCount);
 
         startGame();
     }
@@ -166,7 +167,7 @@ public class Watch extends AppCompatActivity {
 
     private void addCoins(int coins) {
         coinCount += coins;
-        coinCountText.setText("Coins: " + coinCount);
+        coinCountText.setText("" + coinCount);
     }
 
     private void startGame() {
@@ -268,4 +269,12 @@ public class Watch extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void onMoney(View view)
+    {
+        Intent intent = new Intent(this, ShopMoney.class);
+        startActivity (intent) ;
+    }
+
+
 }

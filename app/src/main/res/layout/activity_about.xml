@@ -34,7 +34,7 @@
         android:layout_height="459dp"
         android:layout_above="@+id/ad_view1"
         android:layout_below="@+id/googleIcon"
-        android:layout_marginTop="-7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="21dp">
 
         <LinearLayout
@@ -84,6 +84,7 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view1"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_alignParentStart="true"
@@ -92,10 +93,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="1dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="5dp"
         ads:adSize="SMART_BANNER"
         ads:adUnitId="ca-app-pub-9595963256137742/2254323512" />
 
