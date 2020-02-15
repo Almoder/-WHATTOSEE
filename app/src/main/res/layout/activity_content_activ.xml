@@ -26,7 +26,7 @@
         android:layout_marginBottom="5dp"
         ads:adSize="SMART_BANNER"
         android:layout_gravity="bottom"
-        ads:adUnitId="ca-app-pub-9595963256137742/7466373317" />
+        ads:adUnitId="ca-app-pub-5643226395659003/7368054985" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

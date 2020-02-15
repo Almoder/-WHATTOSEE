@@ -29,7 +29,7 @@ import java.util.List;
 public class CartoonsFragment extends ListFragment {
 
     private InterstitialAd interstitialAd;
-    private static final String AD_UNIT_ID = "ca-app-pub-9595963256137742/3560548201";
+    private static final String AD_UNIT_ID = "ca-app-pub-5643226395659003/2335413679";
 
     private List<Items> items = new ArrayList();
 

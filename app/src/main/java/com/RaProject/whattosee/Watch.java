@@ -27,7 +27,7 @@ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 /** Main Activity. Inflates main activity xml. */
 public class Watch extends AppCompatActivity {
     private AdView adView1;
-    private static final String AD_UNIT_ID = "ca-app-pub-9595963256137742/6406704403";
+    private static final String AD_UNIT_ID = "ca-app-pub-5643226395659003/1812475972";
     private static final long COUNTER_TIME = 10;
     private static final int GAME_OVER_REWARD = 1;
 

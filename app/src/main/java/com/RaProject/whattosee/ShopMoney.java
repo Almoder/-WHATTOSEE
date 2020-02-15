@@ -3,8 +3,10 @@ package com.RaProject.whattosee;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,58 +27,65 @@ import java.util.List;
 import java.util.Map;
 
 public class ShopMoney extends AppCompatActivity {
-
+    private int coinCount;
     private AdView adView1;
     private Button mBuyButton;
-
+    private List<Items> items = new ArrayList();
+    ListView countriesList;
     private BillingClient mBillingClient;
     private Map<String, SkuDetails> mSkuDetailsMap = new HashMap<>();
-
-    private String mSkuId = "500coins";
+    private TextView coinCountText;
+    private String mSkuId = "500";
     private String mSkuId1 = "1000coins";
     private String mSkuId2 = "5000";
     private String mSkuId3 = "10000";
-
+    int p500 = 0;
+    int p1000 = 0;
+    int p5000 = 0;
+    int p10000 = 0;
+    private String RES;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_money);
-
+        coinCountText = findViewById(R.id.coin_count_text1);
+        coinCount = 0;
         initBilling();
 
-        mBuyButton = findViewById(R.id.buy_btn);
-        mBuyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchBilling(mSkuId);
+        setInitialData();
+        // получаем элемент ListView
+        countriesList = (ListView) findViewById(R.id.countriesList);
+        // создаем адаптер
+        StateAdapter stateAdapter = new StateAdapter(this, R.layout.list_what, items);
+        // устанавливаем адаптер
+        countriesList.setAdapter(stateAdapter);
 
-            }
-        });
-        mBuyButton = findViewById(R.id.buy_btn1);
-        mBuyButton.setOnClickListener(new View.OnClickListener() {
+        AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                launchBilling(mSkuId1);
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
+                // получаем выбранный пункт
+                switch (position) {
+                    case 0:
+                        launchBilling(mSkuId);
+                        break;
+                    case 1:
+                        launchBilling(mSkuId1);
+                        break;
+                    case 2:
+                        launchBilling(mSkuId2);
+                        break;
+                    case 3:
+                        launchBilling(mSkuId3);
+                        break;
+                    default: break;
+                }
             }
-        });
-        mBuyButton = findViewById(R.id.buy_btn2);
-        mBuyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchBilling(mSkuId2);
-
-            }
-        });
-        mBuyButton = findViewById(R.id.buy_btn3);
-        mBuyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchBilling(mSkuId3);
-
-            }
-        });
+        };
+        countriesList.setOnItemClickListener(itemListener);
     }
+
+
 
     private void initBilling() {
         mBillingClient = BillingClient.newBuilder(this).setListener(new PurchasesUpdatedListener() {
@@ -101,6 +110,19 @@ public class ShopMoney extends AppCompatActivity {
                         String purchaseId = purchasesList.get(i).getSku();
                         if(TextUtils.equals(mSkuId, purchaseId)) {
                             payComplete();
+                            p500++;
+                        }
+                        if(TextUtils.equals(mSkuId1, purchaseId)) {
+                            payComplete();
+                            p1000++;
+                        }
+                        if(TextUtils.equals(mSkuId2, purchaseId)) {
+                            payComplete();
+                            p5000++;
+                        }
+                        if(TextUtils.equals(mSkuId3, purchaseId)) {
+                            payComplete();
+                            p10000++;
                         }
                     }
                 }
@@ -127,6 +149,7 @@ public class ShopMoney extends AppCompatActivity {
                 if (responseCode == 0) {
                     for (SkuDetails skuDetails : skuDetailsList) {
                         mSkuDetailsMap.put(skuDetails.getSku(), skuDetails);
+
                     }
                 }
             }
@@ -146,6 +169,21 @@ public class ShopMoney extends AppCompatActivity {
     }
 
     private void payComplete() {
-        Toast.makeText(this, getString(R.string.hello_world), Toast.LENGTH_SHORT).show();
+
+    }
+    private void addCoins(int coins) {
+        coinCount += coins;
+        coinCountText.setText("" + coinCount);
+    }
+    private void setInitialData(){
+
+        //items.add(new Items ("Стальной гигант", "-", R.mipmap.ic_launcher2));
+        items.add(new Items(getString(R.string.Buy) + "500 r.a" , "0,99$", R.drawable.coin));
+        items.add(new Items(getString(R.string.Buy) + "1000 r.a", "1,39$", R.drawable.coin));
+        items.add(new Items(getString(R.string.Buy) + "5000 r.a", "4,95$", R.drawable.coin));
+        items.add(new Items(getString(R.string.Buy) + "10000 r.a", "5,94$", R.drawable.coin));
+        //items.add(new Items ("Корпорация монстров", "-", R.mipmap.ic_launcher2));
+        //items.add(new Items ("Труп Невесты", "-", R.mipmap.ic_launcher2));
+
     }
 }
