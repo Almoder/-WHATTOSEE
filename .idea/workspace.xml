@@ -26,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
@@ -61,6 +62,22 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_what.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_what.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ShopMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ShopMoney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Splash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cast.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cast.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_content_activ.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_content_activ.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_money.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_money.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+>>>>>>> MasterIntegr
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +149,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,12 +163,24 @@
                 <element signature="method#openDataBase#0;class#DatabaseHelper#0" />
                 <element signature="method#close#0;class#DatabaseHelper#0" />
                 <element signature="method#onCreate#0;class#DatabaseHelper#0" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ShopMoney.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2178">
+              <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3184#4449#0" />
+                <element signature="method#queryPurchases#0;class#ShopMoney#0" />
+>>>>>>> MasterIntegr
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/movies/MoviesFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
@@ -175,20 +205,42 @@
                 <element signature="method#onDestroy#0;class#ContentActivity#0" />
                 <element signature="method#vali#0;class#ContentActivity#0" />
               </folding>
-            </state>
-          </provider>
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_what.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop_money.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+>>>>>>> MasterIntegr
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/serials/SerialsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+>>>>>>> MasterIntegr
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-83">
@@ -205,11 +257,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
               <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/conetent_view.xml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="121" column="9" lean-forward="true" selection-start-line="91" selection-start-column="8" selection-end-line="121" selection-end-column="9" />
+>>>>>>> MasterIntegr
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/WantToSee/WantToSeeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
@@ -226,15 +291,58 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
               <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cartoons.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="15" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="11" selection-end-column="15" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_content_activ.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="94" column="22" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="94" selection-end-column="22" />
+              <folding>
+                <element signature="method#onOptionsItemSelected#0;class#Watch#0" />
+              </folding>
+>>>>>>> MasterIntegr
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/done/DoneFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
               <caret line="73" column="90" lean-forward="true" selection-start-line="73" selection-start-column="90" selection-end-line="73" selection-end-column="90" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="41" column="47" selection-start-line="35" selection-start-column="7" selection-end-line="41" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onOptionsItemSelected#0;class#ContentActivity#0" />
+                <element signature="method#onPause#0;class#ContentActivity#0" />
+                <element signature="method#onResume#0;class#ContentActivity#0" />
+                <element signature="method#onDestroy#0;class#ContentActivity#0" />
+              </folding>
+>>>>>>> MasterIntegr
             </state>
           </provider>
         </entry>
@@ -272,6 +380,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/ui/Sign/SingFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/ui/share/SendViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/ui/Sign/Sign.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/ui/send/SendFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_what.xml" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/whattosee/BuildConfig.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/GoogleSignInActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/Sign.java" />
+>>>>>>> MasterIntegr
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/Watch.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/ui/share/ShareFragment.java" />
         <option value="$PROJECT_DIR$/gradle.properties" />
@@ -280,20 +402,22 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/About.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/whattosee/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/google-services.json" />
         <option value="$PROJECT_DIR$/app/credentials.json" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/MainActivity.java" />
+>>>>>>> MasterIntegr
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/FirebaseUI.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/FirebaseUI.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Main2Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_firebase_ui.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/About.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -323,13 +447,42 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/WantToSee/WantToSeeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/done/DoneFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentActivity.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/anime/AnimeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/conetent_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/shop/ShopFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Cast.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Splash.java" />
+        <option value="$PROJECT_DIR$/app/google-services.json" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cast.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_content_activ.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_money.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ShopMoney.java" />
+>>>>>>> MasterIntegr
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
+=======
+    <option name="x" value="23" />
+    <option name="y" value="2" />
+    <option name="width" value="1934" />
+    <option name="height" value="1047" />
+>>>>>>> MasterIntegr
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,7 +492,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WHATTOSEE" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="WHATTOSEE" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="WHATTOSEE" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+              <item name="RaProject" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,12 +530,13 @@
             <path>
               <item name="WHATTOSEE" type="b2602c69:ProjectViewProjectNode" />
               <item name="-WHATTOSEE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WHATTOSEE" type="b2602c69:ProjectViewProjectNode" />
               <item name="-WHATTOSEE" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -407,6 +583,8 @@
               <item name="whattosee" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="cartoons" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> MasterIntegr
             </path>
           </expand>
           <select />
@@ -508,7 +686,10 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="AndroidView" />
+=======
+>>>>>>> MasterIntegr
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -524,7 +705,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="memory.settings" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Properties" />
@@ -533,28 +714,45 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\files\tritpo\project\-WHATTOSEE\app\src\main\assets" />
+=======
+    <key name="MoveFile.RECENT_KEYS">
+>>>>>>> MasterIntegr
       <recent name="D:\-WHATTOSEE\app\src\main\res\drawable" />
       <recent name="D:\-WHATTOSEE\app" />
       <recent name="E:\WHATTOSEE\app\src\main\res\drawable" />
       <recent name="E:\WHATTOSEE\app" />
+<<<<<<< HEAD
+=======
+      <recent name="E:\WHATTOSEE\app\src\main\res\mipmap-xxhdpi" />
+>>>>>>> MasterIntegr
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.RaProject.whattosee" />
       <recent name="com.example.whattosee" />
     </key>
     <key name="android.template.packageName">
-      <recent name="com.RaProject" />
       <recent name="com.RaProject.whattosee" />
+      <recent name="com.RaProject" />
       <recent name="com.example.whattosee" />
     </key>
+<<<<<<< HEAD
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\files\tritpo\project\-WHATTOSEE\app\src\main\java\com\RaProject\whattosee" />
       <recent name="D:\files\tritpo\project\-WHATTOSEE\app\src\main\assets" />
       <recent name="D:\-WHATTOSEE\app\src\main\res\drawable" />
       <recent name="D:\-WHATTOSEE\app" />
       <recent name="E:\WHATTOSEE\app\src\main\res\drawable" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\-WHATTOSEE\app\src\main\res\drawable" />
+      <recent name="D:\-WHATTOSEE\app" />
+      <recent name="E:\WHATTOSEE\app\src\main\res\drawable" />
+      <recent name="E:\WHATTOSEE\app" />
+      <recent name="E:\WHATTOSEE\app\src\main\res\layout" />
+>>>>>>> MasterIntegr
     </key>
   </component>
   <component name="RunDashboard">
@@ -756,14 +954,21 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6244444" weight="0.39863843" />
       <window_info id="Structure" order="1" sideWeight="0.37555555" side_tool="true" weight="0.21588486" />
+=======
+      <window_info anchor="top" id="Device File Explorer" order="0" sideWeight="0.50165564" side_tool="true" weight="0.1594533" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62781185" weight="0.26545843" />
+      <window_info id="Structure" order="1" sideWeight="0.37218815" side_tool="true" weight="0.26652452" />
+>>>>>>> MasterIntegr
       <window_info id="Favorites" order="2" sideWeight="0.37555555" side_tool="true" weight="0.21588486" />
       <window_info id="Build Variants" order="3" sideWeight="0.50222224" side_tool="true" weight="0.32995737" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Resources Explorer" order="7" sideWeight="0.4977778" weight="0.32889125" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.53571427" weight="0.3207856" />
       <window_info anchor="bottom" x="22" y="371" width="1876" height="297" id="Logcat" order="1" sideWeight="0.6513859" type="SLIDING" weight="0.9198036" />
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.5415778" weight="0.3289689" />
@@ -774,6 +979,18 @@
       <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.6792144" />
+=======
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.53571427" weight="0.32118452" />
+      <window_info anchor="bottom" x="22" y="371" width="1876" height="297" id="Logcat" order="1" sideWeight="0.6513859" type="SLIDING" weight="0.7095672" />
+      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.5415778" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.22333333" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924472" weight="0.34111112" />
+      <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49733475" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.54371" weight="0.4738041" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.5181237" weight="0.32915717" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45628998" side_tool="true" weight="0.46810934" />
+>>>>>>> MasterIntegr
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" x="147" y="496" width="506" height="346" id="Component Tree" order="11" sideWeight="0.37551582" type="WINDOWED" weight="0.2153518" />
       <window_info anchor="right" x="911" y="511" width="98" height="18" id="Attributes" order="0" type="FLOATING" weight="0.20469083" />
@@ -784,11 +1001,52 @@
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
       <window_info anchor="right" id="Preview" order="6" sideWeight="0.49444443" weight="0.32995737" />
       <window_info anchor="right" x="735" y="387" width="513" height="418" id="Palette " order="7" side_tool="true" type="WINDOWED" weight="0.32995737" />
+<<<<<<< HEAD
       <window_info anchor="right" id="Assistant" order="8" sideWeight="0.49888888" weight="0.48880598" />
       <window_info anchor="right" id="Device File Explorer" order="9" sideWeight="0.50165564" weight="0.16044776" />
       <window_info anchor="right" id="Gradle" order="10" sideWeight="0.49834436" weight="0.102878466" />
       <window_info anchor="right" id="Captures" order="11" sideWeight="0.50555557" side_tool="true" visible="true" weight="0.028744327" />
     </layout>
+=======
+      <window_info anchor="right" id="Assistant" order="8" sideWeight="0.496788" weight="0.48880598" />
+      <window_info anchor="right" id="Captures" order="9" sideWeight="0.503212" side_tool="true" weight="0.48880598" />
+      <window_info anchor="right" id="Gradle" order="10" sideWeight="0.49834436" weight="0.102878466" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="top" id="Device File Explorer" order="0" sideWeight="0.50165564" side_tool="true" weight="0.1594533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62781185" visible="true" weight="0.26545843" />
+      <window_info id="Structure" order="1" sideWeight="0.37218815" side_tool="true" weight="0.26652452" />
+      <window_info id="Favorites" order="2" sideWeight="0.37555555" side_tool="true" weight="0.21588486" />
+      <window_info id="Build Variants" order="3" sideWeight="0.50222224" side_tool="true" weight="0.32995737" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Resources Explorer" order="7" sideWeight="0.4977778" weight="0.32889125" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.53571427" visible="true" weight="0.32118452" />
+      <window_info anchor="bottom" x="22" y="371" width="1876" height="297" id="Logcat" order="1" sideWeight="0.6513859" type="SLIDING" weight="0.71" />
+      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.5415778" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.22333333" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924472" weight="0.34111112" />
+      <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.49733475" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.54371" weight="0.4738041" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.5181237" weight="0.32915717" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45628998" side_tool="true" weight="0.46810934" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" x="147" y="496" width="506" height="346" id="Component Tree" order="11" sideWeight="0.37551582" type="WINDOWED" weight="0.2153518" />
+      <window_info anchor="right" x="911" y="511" width="98" height="18" id="Attributes" order="0" type="FLOATING" weight="0.20469083" />
+      <window_info anchor="right" id="StringPreview" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+      <window_info anchor="right" id="Preview" order="6" sideWeight="0.49444443" weight="0.32995737" />
+      <window_info anchor="right" x="735" y="387" width="513" height="418" id="Palette " order="7" side_tool="true" type="WINDOWED" weight="0.32995737" />
+      <window_info anchor="right" id="Assistant" order="8" sideWeight="0.496788" weight="0.48880598" />
+      <window_info anchor="right" id="Captures" order="9" sideWeight="0.503212" side_tool="true" weight="0.48880598" />
+      <window_info anchor="right" id="Gradle" order="10" sideWeight="0.49834436" weight="0.102878466" />
+    </layout-to-restore>
+>>>>>>> MasterIntegr
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Патч для попытки" />
@@ -807,6 +1065,7 @@
     <SUITE FILE_PATH="coverage/WHATTOSEE$E__WHATTOSEE_app__signingReport_.ic" NAME="$PROJECT_DIR$/app [signingReport] Coverage Results" MODIFIED="1580847142875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -829,11 +1088,19 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/auhtem.jpg" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/splash.xml">
       <provider selected="true" editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/auhtem.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> MasterIntegr
         <state relative-caret-position="220">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/company_logo.jpg" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -926,9 +1193,116 @@
           <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/company_logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/anime/AnimeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/coin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_wanttosee.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tools.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_shop.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_share.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_serials.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movies.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_done.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_anime.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_send.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/share/ShareFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/serials/SerialsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/send/SendFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> MasterIntegr
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2450">
           <caret line="264" column="16" selection-start-line="264" selection-start-column="16" selection-end-line="264" selection-end-column="16" />
         </state>
@@ -955,10 +1329,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+=======
+        <state relative-caret-position="200">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="84" column="33" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="84" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding>
+            <element signature="e#157#234#0" />
+          </folding>
+>>>>>>> MasterIntegr
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -977,6 +1382,36 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Cast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <element signature="method#onPause#0;class#Cast#0" />
+            <element signature="method#onResume#0;class#Cast#0" />
+            <element signature="method#onDestroy#0;class#Cast#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="155" column="38" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/shop/ShopFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+          <folding>
+            <element signature="e#2218#2877#1" />
+            <element signature="e#2548#2795#1" />
+            <element signature="e#3256#3502#1" />
+          </folding>
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -985,6 +1420,7 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sing_in.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -997,6 +1433,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="36" selection-start-column="38" selection-end-line="1" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
@@ -1012,41 +1457,77 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/GoogleSignInActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+=======
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="31" />
+>>>>>>> MasterIntegr
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#GoogleSignInActivity#0" />
+            <element signature="method#onStart#0;class#GoogleSignInActivity#0" />
+            <element signature="method#firebaseAuthWithGoogle#0;class#GoogleSignInActivity#0" />
+            <element signature="method#signIn#0;class#GoogleSignInActivity#0" />
+            <element signature="method#updateUI#0;class#GoogleSignInActivity#0" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_anime.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/google-services.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_serials.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/conetent_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="185" column="20" selection-start-line="185" selection-start-column="20" selection-end-line="185" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cast.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
@@ -1073,18 +1554,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sing_in.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movies.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420">
@@ -1116,10 +1627,23 @@
             <element signature="method#openDataBase#0;class#DatabaseHelper#0" />
             <element signature="method#close#0;class#DatabaseHelper#0" />
             <element signature="method#onCreate#0;class#DatabaseHelper#0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ContentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="41" column="47" selection-start-line="35" selection-start-column="7" selection-end-line="41" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#ContentActivity#0" />
+            <element signature="method#onPause#0;class#ContentActivity#0" />
+            <element signature="method#onResume#0;class#ContentActivity#0" />
+            <element signature="method#onDestroy#0;class#ContentActivity#0" />
+>>>>>>> MasterIntegr
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/movies/MoviesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1127,9 +1651,16 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_content_activ.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/serials/SerialsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1141,19 +1672,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cartoons.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="11" selection-end-column="15" />
+>>>>>>> MasterIntegr
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-83">
           <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/conetent_view.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_what.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/Watch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="94" column="22" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="94" selection-end-column="22" />
+>>>>>>> MasterIntegr
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#Watch#0" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/anime/AnimeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1189,6 +1743,39 @@
             <element signature="method#onResume#0;class#ContentActivity#0" />
             <element signature="method#onDestroy#0;class#ContentActivity#0" />
             <element signature="method#vali#0;class#ContentActivity#0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_watch.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ui/cartoons/CartoonsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="91" selection-start-column="8" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop_money.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RaProject/whattosee/ShopMoney.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="119" column="42" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3184#4449#0" />
+            <element signature="method#queryPurchases#0;class#ShopMoney#0" />
+>>>>>>> MasterIntegr
           </folding>
         </state>
       </provider>

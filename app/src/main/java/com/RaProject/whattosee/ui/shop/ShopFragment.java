@@ -10,8 +10,10 @@ import android.widget.ListView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
 
+import com.RaProject.whattosee.Cast;
 import com.RaProject.whattosee.Items;
 import com.RaProject.whattosee.R;
+import com.RaProject.whattosee.ShopMoney;
 import com.RaProject.whattosee.StateAdapter;
 import com.RaProject.whattosee.Watch;
 import com.RaProject.whattosee.ui.done.DoneFragment;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShopFragment extends ListFragment {
+
 
     private List<Items> items = new ArrayList();
 
@@ -45,7 +48,23 @@ public class ShopFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
         Intent intent;
         switch (position) {
+            case 0: {
+                FragmentManager fragmentManager = getFragmentManager();
+
+                // Получаем ссылку на второй фрагмент по ID
+                DoneFragment fragment2 = (DoneFragment) fragmentManager
+                        .findFragmentById(R.id.fragment3);
+                if (fragment2 == null || !fragment2.isVisible()) {
+                    // запускаем активность
+                    Intent intent1 = new Intent(getActivity(), ShopMoney.class);
+                    intent1.putExtra("buttonIndex", position);
+                    startActivity(intent1);
+                } else {
+                }
+            }
+            break;
             case 2:
+            {
                 // подключаем FragmentManager
                 FragmentManager fragmentManager = getFragmentManager();
 
@@ -57,10 +76,25 @@ public class ShopFragment extends ListFragment {
                     Intent intent1 = new Intent(getActivity(), Watch.class);
                     intent1.putExtra("buttonIndex", position);
                     startActivity(intent1);
+                } else {
                 }
-                else { }
+        }
                 break;
-            case 1:
+            case 1: {
+                // подключаем FragmentManager
+                FragmentManager fragmentManager = getFragmentManager();
+
+                // Получаем ссылку на второй фрагмент по ID
+                DoneFragment fragment2 = (DoneFragment) fragmentManager
+                        .findFragmentById(R.id.fragment4);
+                if (fragment2 == null || !fragment2.isVisible()) {
+                    // запускаем активность
+                    Intent intent1 = new Intent(getActivity(), Cast.class);
+                    intent1.putExtra("buttonIndex", position);
+                    startActivity(intent1);
+                } else {
+                }
+            }
                 break;
             default: break;
         }
@@ -70,11 +104,19 @@ public class ShopFragment extends ListFragment {
 
 
     private void setInitialData(){
+<<<<<<< HEAD
         /*
         items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", null, R.mipmap.ic_launcher2));
         items.add(new Items ("Купить Темы", "Покупайте Темы за моне или деньги", null, R.mipmap.ic_launcher2));
         items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", null, R.mipmap.ic_launcher2));
         */
+=======
+
+        items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", R.mipmap.ic_launcher2));
+        items.add(new Items ("Купить Темы", "Покупайте Темы за монеты", R.mipmap.ic_launcher2));
+        items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", R.mipmap.ic_launcher2));
+
+>>>>>>> MasterIntegr
     }
 
 }

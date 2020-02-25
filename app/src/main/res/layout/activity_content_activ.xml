@@ -12,7 +12,7 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view3"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="57dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -23,10 +23,10 @@
         android:layout_marginLeft="-5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="5dp"
         ads:adSize="SMART_BANNER"
         android:layout_gravity="bottom"
-        ads:adUnitId="ca-app-pub-9595963256137742/7466373317" />
+        ads:adUnitId="ca-app-pub-5643226395659003/7368054985" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
