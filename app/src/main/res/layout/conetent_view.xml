@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:gravity="left"
             android:text="@string/Title"
             android:textColor="@color/Black"
@@ -28,11 +28,12 @@
         <ImageView
             android:id="@+id/ic1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="500dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="20dp"
-            android:scaleType="centerInside"
+            android:gravity= "left"
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Title_Content" />
         <!-- Название: -->
@@ -42,12 +43,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
             android:gravity="left"
-            android:textSize="16dp"
             android:text="@string/Title1"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ic1"/>
+            app:layout_constraintTop_toBottomOf="@+id/ic1" />
         <!-- Год выпуска: -->
         <TextView
             android:id="@+id/Year"
@@ -55,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Year"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Title_Content1" />
         <!-- Страна: -->
@@ -68,10 +70,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Country"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Year" />
         <!-- Жанр: -->
@@ -81,10 +83,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Genres"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/country" />
         <!-- Продолжительность: -->
@@ -94,10 +96,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Duration"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genres" />
         <!-- Рейтинг разработчиков: -->
@@ -107,10 +109,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/RatingDev"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/duration" />
         <!-- Рейтинг КиноПоиск: -->
@@ -120,10 +122,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/RatingKinoPoisk"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingDev" />
         <!-- Режиссер: -->
@@ -133,10 +135,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Producer"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingKinoPoisk" />
         <!-- В ролях: -->
@@ -146,13 +148,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/Cast"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/producer" />
         <!-- Описание: -->
+        <!-- Хочу посмотреть -->
         <TextView
             android:id="@+id/discription1"
             android:layout_width="fill_parent"
@@ -161,11 +164,11 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="20dp"
             android:text="@string/Discription"
-            android:textSize="16dp"
             android:textColor="@color/Black"
+            android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cast" />
-        <!-- Хочу посмотреть -->
+
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="59dp"

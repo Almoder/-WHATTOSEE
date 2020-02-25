@@ -59,16 +59,10 @@ public class CartoonsFragment extends ListFragment {
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
-                Toast.makeText(getContext(),
-                        "onAdLoaded()",
-                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
-                Toast.makeText(getActivity(),
-                        "onAdFailedToLoad() with error code: " + errorCode,
-                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -77,7 +71,13 @@ public class CartoonsFragment extends ListFragment {
         });
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
-        interstitialAd.loadAd(adRequest);
+        try {
+            interstitialAd.loadAd(adRequest);
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
     }
 
     @Override
@@ -95,13 +95,13 @@ public class CartoonsFragment extends ListFragment {
         FragmentManager fragmentManager = getFragmentManager();
         DoneFragment fragment2 = (DoneFragment) fragmentManager.findFragmentById(R.id.fragment1);
         if (fragment2 == null || !fragment2.isVisible()) {
-            if (interstitialAd != null && interstitialAd.isLoaded()) interstitialAd.show();
-            else {
-                Toast.makeText(getContext(), "Ad did not load", Toast.LENGTH_SHORT).show();
-                AdRequest adRequest = new AdRequest.Builder()
-                        .build();
-                interstitialAd.loadAd(adRequest);
-            }
+           // if (interstitialAd != null && interstitialAd.isLoaded()) interstitialAd.show();
+          //  else {
+               // Toast.makeText(getContext(), "Ad did not load", Toast.LENGTH_SHORT).show();
+              //  AdRequest adRequest = new AdRequest.Builder()
+              //          .build();
+              //  interstitialAd.loadAd(adRequest);
+           // }
             Intent intent = new Intent(getActivity(), ContentActivity.class);
             intent.putExtra("Part", INDV);
             intent.putExtra("aType", -1);
