@@ -16,25 +16,33 @@ public class StateAdapter extends ArrayAdapter<Items> {
     private int layout;
     private List<Items> states;
 
-    public StateAdapter(Context context, int resource, List<Items> states) {
-        super(context, resource, states);
-        this.states = states;
-        this.layout = resource;
-        this.inflater = LayoutInflater.from(context);
-    }
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public StateAdapter(Context context,
+                        int resource,
+                        List<Items> states) {
 
-        View view=inflater.inflate(this.layout, parent, false);
+        super(context, resource, states);
+        this.inflater = LayoutInflater.from(context);
+        this.layout = resource;
+        this.states = states;
+    }
+
+    public View getView(int position,
+                        View convertView,
+                        ViewGroup parent) {
+
+        View view = inflater.inflate(this.layout, parent, false);
 
         ImageView flagView = (ImageView) view.findViewById(R.id.ic);
         TextView nameView = (TextView) view.findViewById(R.id.name);
-        TextView capitalView = (TextView) view.findViewById(R.id.discription);
+        TextView yearView = (TextView) view.findViewById(R.id.year);
+        TextView genrView = (TextView) view.findViewById(R.id.genres);
 
         Items state = states.get(position);
 
-        flagView.setImageResource(state.getItemResource());
+        flagView.setImageBitmap(state.getItemRes());
         nameView.setText(state.getName());
-        capitalView.setText(state.getDiscription());
+        yearView.setText(state.getYear());
+        genrView.setText(state.getGenres());
 
         return view;
     }

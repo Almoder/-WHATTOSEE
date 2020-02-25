@@ -1,16 +1,39 @@
 package com.RaProject.whattosee;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class Items {
+    private int key;
+    private Bitmap itemRes;
     private String name;
-    private String discription;
-    private int ItemResource;
+    private String genres;
+    private String year;
 
+    public Items(int key,
+                 Bitmap image,
+                 String title,
+                 String year){
 
-    public Items(String name, String discription, int Res){
+        this.key = key;
+        this.itemRes = image;
+        this.name = title;
+        this.year = year;
 
-        this.name=name;
-        this.discription=discription;
-        this.ItemResource=Res;
+    }
+
+    public Items(int key,
+                 byte[] blob,
+                 String title,
+                 String year,
+                 String genres){
+
+        this.key = key;
+        this.itemRes = BitmapFactory.decodeByteArray(blob, 0, blob.length);
+        this.name = title;
+        this.year = year;
+        this.genres = genres;
+
     }
 
     public String getName() {
@@ -21,20 +44,36 @@ public class Items {
         this.name = name;
     }
 
-    public String getDiscription() {
-        return this.discription;
+    public String getGenres() {
+        return this.genres;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setGenres(String genres) {
+        this.genres = genres;
     }
 
-    public int getItemResource() {
-        return this.ItemResource;
+    public Bitmap getItemRes() {
+        return this.itemRes;
     }
 
-    public void setItemResource(int ItemResource) {
-        this.ItemResource = ItemResource;
+    public void setItemRes(Bitmap itemRes) {
+        this.itemRes = itemRes;
+    }
+
+    public int getKey(){
+        return this.key;
+    }
+
+    public void setKys(int key) {
+        this.key = key;
+    }
+
+    public String getYear() {
+        return this.year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 }
 

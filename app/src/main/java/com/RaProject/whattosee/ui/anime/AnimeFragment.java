@@ -1,6 +1,9 @@
 package com.RaProject.whattosee.ui.anime;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +14,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.ListFragment;
 
 import com.RaProject.whattosee.ContentActivity;
+import com.RaProject.whattosee.DatabaseHelper;
 import com.RaProject.whattosee.Items;
 import com.RaProject.whattosee.R;
 import com.RaProject.whattosee.StateAdapter;
+import com.RaProject.whattosee.ui.done.DoneFragment;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +31,6 @@ public class AnimeFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         setInitialData();
         StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
         setListAdapter(stateAdapter);
@@ -42,34 +47,43 @@ public class AnimeFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        String INDV = "A";
         super.onListItemClick(l, v, position, id);
-        Intent intent;
-        switch (position) {
-            case 0:
-                // подключаем FragmentManager
-                FragmentManager fragmentManager = getFragmentManager();
-
-                // Получаем ссылку на второй фрагмент по ID
-                    // запускаем активность
-                    Intent intent1 = new Intent(getActivity(), ContentActivity.class);
-                    INDV = INDV + position;
-                    intent1.putExtra("Part", INDV);
-
-                    startActivity(intent1);
-                break;
-            case 1:
-                break;
-            default: break;
+        int INDV = items.get(position).getKey();
+        FragmentManager fragmentManager = getFragmentManager();
+        DoneFragment fragment2 = (DoneFragment) fragmentManager.findFragmentById(R.id.fragment1);
+        if (fragment2 == null || !fragment2.isVisible()) {
+            Intent intent = new Intent(getActivity(), ContentActivity.class);
+            intent.putExtra("Part", INDV);
+            intent.putExtra("aType", -1);
+            startActivity(intent);
         }
-        //Запускаем активность
     }
 
-
-
     private void setInitialData(){
-
-
+        SQLiteDatabase maindb;
+        DatabaseHelper helper = new DatabaseHelper(getContext(), "content.db");
+        try { helper.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase"); }
+        try { maindb = helper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException; }
+        Cursor cursor = maindb.rawQuery("select _Key, Image, Title, Year from MainTable where _Key in (select * from Anime)", null);
+        Cursor genres = maindb.rawQuery("select * from GenresKeys where _Key in (select * from Anime)", null);
+        cursor.moveToFirst();
+        genres.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            String genresTmp = new String();
+            for(int i = 1; i < 20; i++)
+                if(genres.getString(i) != null) genresTmp += genres.getString(i);
+            items.add(new Items(cursor.getInt(0), cursor.getBlob(1),
+                    cursor.getString(2), cursor.getString(3), genresTmp));
+            cursor.moveToNext();
+            genres.moveToNext();
+        }
+        cursor.close();
+        maindb.close();
+        helper.close();
     }
 
 }

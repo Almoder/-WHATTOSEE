@@ -33,26 +33,26 @@ public class ContentAdapter extends ArrayAdapter<ContentContainer> {
         TextView countryView = (TextView) view.findViewById(R.id.country);
         TextView genresView = (TextView) view.findViewById(R.id.genres);
         TextView DurationView = (TextView) view.findViewById(R.id.duration);
-        TextView IMDBView = (TextView) view.findViewById(R.id.ratingIMDB);
+        TextView IMDBView = (TextView) view.findViewById(R.id.ratingDev);
         TextView KinoPoiskView = (TextView) view.findViewById(R.id.ratingKinoPoisk);
         TextView producerView = (TextView) view.findViewById(R.id.producer);
         TextView DiscView = (TextView) view.findViewById(R.id.discription1);
         TextView CastView = (TextView) view.findViewById(R.id.cast);
 
-        ContentContainer conts =cont.get(position);
+        ContentContainer conts = cont.get(position);
 
         tatle1View.setText(conts.getName());
-        icView.setImageResource(conts.getItemResource());
+        icView.setImageBitmap(conts.getItemRes());
         tatle2View.setText("Название: " + conts.getName1());
         yearView.setText("Год: "+ conts.getYear());
         countryView.setText("Страна: "+ conts.getCountry());
         genresView.setText("Жанр: " + conts.getGenres());
         DurationView.setText("Длительность: " + conts.getDuration());
-        IMDBView.setText("Рейтинг IMDB: "+ conts.getRatingIMDB());
+        IMDBView.setText("Рейтинг разработчиков: "+ conts.getRatingDev());
         KinoPoiskView.setText("Рейтинг Кинопоиск: "+conts.getRatingKinoPoisk());
         producerView.setText("Режиссёр: " +conts.getProducer());
-        DiscView.setText("Описание: \n "+ conts.getDiscription());
-        CastView.setText("В ролях:" + conts.getCast());
+        DiscView.setText("Описание: \n "+ conts.getDescription());
+        CastView.setText("В ролях: " + conts.getCast());
 
         return view;
     }

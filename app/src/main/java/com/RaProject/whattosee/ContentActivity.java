@@ -1,8 +1,12 @@
 package com.RaProject.whattosee;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 
 import androidx.appcompat.app.ActionBar;
@@ -14,17 +18,17 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContentActivity extends AppCompatActivity {
 
-
     private AdView adView;
     private List<ContentContainer> items = new ArrayList();
     ListView countriesList;
-    String INF;
-    int IDnTF;
+    String INF, key_s;
+    int IDnTF, key_i, aType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,12 +106,125 @@ public class ContentActivity extends AppCompatActivity {
         Intent intent = getIntent();
         INF = intent.getStringExtra("Part");
         System.out.println(INF);
-
-        items.add(new ContentContainer ("ВАЛЛ·И", "ВАЛЛ·И", "2008", "США","Фантаскика, Приключения, Семейный",
-                "92 мин", "8.4", "8.3", "Эндрю Стэнтон", vali(), " Бен Бертт, Элисса Найт, Джефф Гарлин, Фред Уиллард, Джон Ратценбергер",
-                R.drawable.vali));
+        Bundle args = intent.getExtras();
+        aType = args.getInt("aType");
+        key_i = args.getInt("Part");
+        key_s = Integer.toString(args.getInt("Part"));
+        SQLiteDatabase maindb;
+        /*try {
+            maindb = getBaseContext().openOrCreateDatabase("content.db", MODE_PRIVATE, null);
+        } catch (SQLException mSQLException) {
+            throw new Error("DatabaseIsNotOpened!");
+        }*/
+        DatabaseHelper helper = new DatabaseHelper(this, "content.db");
+        try {
+            helper.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase");
+        }
+        try {
+            maindb = helper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        }
+        //String[] selectionArgs = {key};
+        Cursor entry = maindb.rawQuery("SELECT * FROM MainTable WHERE _Key = " + key_s, null);
+        Cursor genres = maindb.rawQuery("SELECT * FROM GenresKeys WHERE _Key = " + key_s, null);
+        items.add(new ContentContainer(entry, genres));
+        entry.close();
+        genres.close();
+        maindb.close();
+        helper.close();
+        //Тут нужно ...flush()
+        //items.add(new ContentContainer ("ВАЛЛ·И", "ВАЛЛ·И", "2008", "США","Фантаскика, Приключения, Семейный",
+        //        "92 мин", "8.4", "8.3", "Эндрю Стэнтон", vali(), " Бен Бертт, Элисса Найт, Джефф Гарлин, Фред Уиллард, Джон Ратценбергер",
+        //        R.drawable.vali));
         //items.add(new Items ("Корпорация монстров", "-", R.mipmap.ic_launcher2));
         //items.add(new Items ("Труп Невесты", "-", R.mipmap.ic_launcher2));
+    }
 
+    public void wantOnClick(View view) {
+        DatabaseHelper helper = new DatabaseHelper(this, "content.db");
+        SQLiteDatabase maindb;
+        try {
+            helper.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase");
+        }
+        try {
+            maindb = helper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        }
+        switch(aType) {
+            case 0: {
+                maindb.execSQL("delete from Wanttowatch where _Key = " + key_s);
+                maindb.close();
+                helper.close();
+                getFragmentManager().popBackStack();
+                System.gc();
+                break;
+            }
+            case 1: {
+                try {
+                    maindb.execSQL("delete from Saw where _Key = " + key_s);
+                } catch (SQLException mSQLExcept) {
+                    throw mSQLExcept;
+                }
+                maindb.close();
+                helper.close();
+                getFragmentManager().popBackStack();
+                System.gc();
+                break;
+            }
+            default: {
+                try {
+                    Cursor cursor = maindb.rawQuery("select * from Wanttowatch where _Key = " + key_s, null);
+                    if (cursor.moveToFirst()) {
+                        maindb.close();
+                        helper.close();
+                        return;
+                    }
+                } catch (SQLException mSQLException) {
+                    throw mSQLException;
+                }
+                maindb.execSQL("insert into Wanttowatch values (" + key_i + ")");
+                view.setEnabled(false);
+                maindb.close();
+                helper.close();
+            }
+        }
+    }
+
+    public void sawOnClick(View view) {
+        if (aType == 1) return;
+        DatabaseHelper helper = new DatabaseHelper(this, "content.db");
+        SQLiteDatabase maindb;
+        try {
+            helper.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase");
+        }
+        try {
+            maindb = helper.getWritableDatabase();
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        }
+        try {
+            Cursor cursor = maindb.rawQuery("select * from Saw where _Key = " + key_s, null);
+            if (cursor.moveToFirst()) {
+                maindb.close();
+                helper.close();
+                System.gc();
+                return;
+            }
+        } catch (SQLException mSQLException) {
+            throw mSQLException;
+        }
+        maindb.execSQL("insert into Saw values (" + key_i + ")");
+        view.setEnabled(false);
+        maindb.close();
+        helper.close();
+        System.gc();
     }
 }

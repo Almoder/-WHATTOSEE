@@ -70,11 +70,11 @@ public class ShopFragment extends ListFragment {
 
 
     private void setInitialData(){
-
-        items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", R.mipmap.ic_launcher2));
-        items.add(new Items ("Купить Темы", "Покупайте Темы за моне или деньги", R.mipmap.ic_launcher2));
-        items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", R.mipmap.ic_launcher2));
-
+        /*
+        items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", null, R.mipmap.ic_launcher2));
+        items.add(new Items ("Купить Темы", "Покупайте Темы за моне или деньги", null, R.mipmap.ic_launcher2));
+        items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", null, R.mipmap.ic_launcher2));
+        */
     }
 
 }

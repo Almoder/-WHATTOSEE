@@ -34,8 +34,8 @@
     <string name="Year">Год выпуска: </string>
     <string name="Country">Страна: </string>
     <string name="Genres">Жанр: </string>
-    <string name="Duration">Продолжительность: </string>
-    <string name="RatingIMDB">Рейтинг IMDB: </string>
+    <string name="Duration">Длительность: </string>
+    <string name="RatingDev">Рейтинг разработчиков: </string>
     <string name="RatingKinoPoisk">Рейтинг Кинопоиск: </string>
     <string name="Producer">Режиссер: </string>
     <string name="Cast">В ролях: </string>
@@ -152,5 +152,73 @@
         \n https://www.imdb.com/
     </string>
 
+    <!-- Жанры -->
+    <string name="genre00">Биография</string>
+    <string name="genre01">Боевик</string>
+    <string name="genre02">Вестерн</string>
+    <string name="genre03">Военный</string>
+    <string name="genre04">Детектив</string>
+    <string name="genre05">Документальный</string>
+    <string name="genre06">Драма</string>
+    <string name="genre07">Исторический</string>
+    <string name="genre08">Комедия</string>
+    <string name="genre09">Криминал</string>
+    <string name="genre10">Мелодрамма</string>
+    <string name="genre11">Мюзикл</string>
+    <string name="genre12">Приключение</string>
+    <string name="genre13">Семейный</string>
+    <string name="genre14">Спорт</string>
+    <string name="genre15">Триллер</string>
+    <string name="genre16">Хоррор</string>
+    <string name="genre17">Фантастика</string>
+    <string name="genre18">Фентези</string>
+    <!-- Массив^^^ -->
+    <string-array name="genres_array" translatable="false">
+        <item>@string/genre00</item>
+        <item>@string/genre01</item>
+        <item>@string/genre02</item>
+        <item>@string/genre03</item>
+        <item>@string/genre04</item>
+        <item>@string/genre05</item>
+        <item>@string/genre06</item>
+        <item>@string/genre07</item>
+        <item>@string/genre08</item>
+        <item>@string/genre09</item>
+        <item>@string/genre10</item>
+        <item>@string/genre11</item>
+        <item>@string/genre12</item>
+        <item>@string/genre13</item>
+        <item>@string/genre14</item>
+        <item>@string/genre15</item>
+        <item>@string/genre16</item>
+        <item>@string/genre17</item>
+        <item>@string/genre18</item>
+    </string-array>
+    <!-- Колонки MainTable -->
+    <string name="c00">Key</string>
+    <string name="c01">Image</string>
+    <string name="c02">Title</string>
+    <string name="c03">Year</string>
+    <string name="c04">Country</string>
+    <string name="c05">Duration</string>
+    <string name="c06">Rating1</string>
+    <string name="c07">Rating2</string>
+    <string name="c08">Director</string>
+    <string name="c09">Cast</string>
+    <string name="c10">Descript</string>
+    <!-- Массив^^^ -->
+    <string-array name="main_table_columns" translatable="false">
+        <item>@string/c00</item>
+        <item>@string/c01</item>
+        <item>@string/c02</item>
+        <item>@string/c03</item>
+        <item>@string/c04</item>
+        <item>@string/c05</item>
+        <item>@string/c06</item>
+        <item>@string/c07</item>
+        <item>@string/c08</item>
+        <item>@string/c09</item>
+        <item>@string/c10</item>
+    </string-array>
 
 </resources>

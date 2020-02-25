@@ -1,36 +1,61 @@
 package com.RaProject.whattosee;
 
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class ContentContainer {
     private String name;
-    private int ItemResource;
+    private Bitmap itemRes;
     private String name1;
     private String year;
     private String country;
     private String genres;
-    private String Duration;
-    private String RatingIMDB;
-    private String RatingKinoPoisk;
+    private String duration;
+    private String ratingDev;
+    private String ratingKinoPoisk;
     private String producer;
-    private String discription;
-    private String Cast;
+    private String description;
+    private String cast;
 
 
     public ContentContainer(String name, String name1, String year, String country,
-                            String genres, String duration, String ratingIMDB, String ratingKinoPoisk,
-                            String producer, String discription, String cast, int itemResource)
+                            String genres, String duration, String ratingDev, String ratingKinoPoisk,
+                            String producer, String description, String cast, Bitmap itemRes)
     {
         this.name = name;
-        ItemResource = itemResource;
+        itemRes = itemRes;
         this.name1 = name1;
         this.year = year;
         this.country = country;
         this.genres = genres;
-        Duration = duration;
-        RatingIMDB = ratingIMDB;
-        RatingKinoPoisk = ratingKinoPoisk;
+        this.duration = duration;
+        this.ratingDev = ratingDev;
+        this.ratingKinoPoisk = ratingKinoPoisk;
         this.producer = producer;
-        this.discription = discription;
-        Cast = cast;
+        this.description = description;
+        this.cast = cast;
+    }
+
+    public ContentContainer(Cursor cursor, Cursor genres){
+
+        cursor.moveToFirst();
+        genres.moveToFirst();
+        this.name = cursor.getString(2);
+        byte[] blob = cursor.getBlob(1);
+        itemRes = BitmapFactory.decodeByteArray(blob , 0, blob .length);
+        this.name1 = cursor.getString(2);
+        this.year = cursor.getString(3);
+        this.country = cursor.getString(4);
+        this.genres = "";
+        for(int i = 1; i < 20; i++)
+            if(genres.getString(i) != null) this.genres += genres.getString(i);
+        this.duration = cursor.getString(5);
+        this.ratingDev = cursor.getString(6);
+        this.ratingKinoPoisk = cursor.getString(7);
+        this.producer = cursor.getString(8);
+        this.description = cursor.getString(10);
+        this.cast = cursor.getString(9);
     }
 
     public String getName() {
@@ -40,20 +65,21 @@ public class ContentContainer {
     public void setName(String name) {
         this.name = name;
     }
-    public String getDiscription() {
-        return this.discription;
+
+    public String getDescription() {
+        return this.description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDiscription(String description) {
+        this.description = description;
     }
 
-    public int getItemResource() {
-        return this.ItemResource;
+    public Bitmap getItemRes() {
+        return this.itemRes;
     }
 
-    public void setItemResource(int ItemResource) {
-        this.ItemResource = ItemResource;
+    public void setItemRes(Bitmap itemRes) {
+        this.itemRes = itemRes;
     }
 
     public String getCountry() {
@@ -72,28 +98,28 @@ public class ContentContainer {
         this.genres = genres;
     }
 
-    public String getRatingIMDB() {
-        return RatingIMDB;
+    public String getRatingDev() {
+        return ratingDev;
     }
 
-    public void setRatingIMDB(String ratingIMDB) {
-        RatingIMDB = ratingIMDB;
+    public void setRatingDev(String ratingDev) {
+        this.ratingDev = ratingDev;
     }
 
     public String getRatingKinoPoisk() {
-        return RatingKinoPoisk;
+        return ratingKinoPoisk;
     }
 
     public void setRatingKinoPoisk(String ratingKinoPoisk) {
-        RatingKinoPoisk = ratingKinoPoisk;
+        this.ratingKinoPoisk = ratingKinoPoisk;
     }
 
     public String getDuration() {
-        return Duration;
+        return duration;
     }
 
     public void setDuration(String duration) {
-        Duration = duration;
+        this.duration = duration;
     }
 
     public String getYear() {
@@ -121,10 +147,10 @@ public class ContentContainer {
     }
 
     public String getCast() {
-        return Cast;
+        return cast;
     }
 
     public void setCast(String cast) {
-        Cast = cast;
+        this.cast = cast;
     }
 }

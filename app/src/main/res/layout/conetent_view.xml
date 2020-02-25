@@ -10,72 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/cast"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Cast"
-            android:textSize="16dp"
-            android:textColor="@color/Black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/producer" />
-
-        <TextView
-            android:id="@+id/producer"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Producer"
-            android:textSize="16dp"
-            android:textColor="@color/Black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ratingKinoPoisk" />
-
-        <TextView
-            android:id="@+id/country"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Country"
-            android:textSize="16dp"
-            android:textColor="@color/Black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Year" />
-
-        <TextView
-            android:id="@+id/Year"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Year"
-            android:textSize="16dp"
-            android:textColor="@color/Black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Title_Content1" />
-
-        <TextView
-            android:id="@+id/Title_Content1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="32dp"
-            android:gravity="left"
-            android:textSize="16dp"
-            android:text="@string/Title1"
-            android:textColor="@color/Black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ic1" />
-
+        <!-- Название фильма -->
         <TextView
             android:id="@+id/Title_Content"
             android:layout_width="fill_parent"
@@ -89,15 +24,57 @@
             android:textSize="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!-- Изображение -->
         <ImageView
             android:id="@+id/ic1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginTop="20dp"
+            android:scaleType="centerInside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Title_Content" />
-
+        <!-- Название: -->
+        <TextView
+            android:id="@+id/Title_Content1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:textSize="16dp"
+            android:text="@string/Title1"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic1"/>
+        <!-- Год выпуска: -->
+        <TextView
+            android:id="@+id/Year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Year"
+            android:textSize="16dp"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Title_Content1" />
+        <!-- Страна: -->
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Country"
+            android:textSize="16dp"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Year" />
+        <!-- Жанр: -->
         <TextView
             android:id="@+id/genres"
             android:layout_width="fill_parent"
@@ -110,7 +87,7 @@
             android:textColor="@color/Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/country" />
-
+        <!-- Продолжительность: -->
         <TextView
             android:id="@+id/duration"
             android:layout_width="fill_parent"
@@ -123,20 +100,20 @@
             android:textColor="@color/Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genres" />
-
+        <!-- Рейтинг разработчиков: -->
         <TextView
-            android:id="@+id/ratingIMDB"
+            android:id="@+id/ratingDev"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="20dp"
-            android:text="@string/RatingIMDB"
+            android:text="@string/RatingDev"
             android:textSize="16dp"
             android:textColor="@color/Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/duration" />
-
+        <!-- Рейтинг КиноПоиск: -->
         <TextView
             android:id="@+id/ratingKinoPoisk"
             android:layout_width="fill_parent"
@@ -148,8 +125,34 @@
             android:textSize="16dp"
             android:textColor="@color/Black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ratingIMDB" />
-
+            app:layout_constraintTop_toBottomOf="@+id/ratingDev" />
+        <!-- Режиссер: -->
+        <TextView
+            android:id="@+id/producer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Producer"
+            android:textSize="16dp"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingKinoPoisk" />
+        <!-- В ролях: -->
+        <TextView
+            android:id="@+id/cast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Cast"
+            android:textSize="16dp"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/producer" />
+        <!-- Описание: -->
         <TextView
             android:id="@+id/discription1"
             android:layout_width="fill_parent"
@@ -162,7 +165,7 @@
             android:textColor="@color/Black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cast" />
-
+        <!-- Хочу посмотреть -->
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="59dp"
@@ -173,12 +176,13 @@
             android:layout_marginBottom="60dp"
             android:background="#2DE434B1"
             android:tint="#00B12C52"
+            android:onClick="wantOnClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageButton2"
             app:layout_constraintTop_toBottomOf="@+id/discription1"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_filter_center_focus_black_24dp" />
-
+        <!-- Посмотрел -->
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="56dp"
@@ -189,12 +193,12 @@
             android:layout_marginBottom="60dp"
             android:background="#364DBE57"
             android:tint="#009688"
+            android:onClick="sawOnClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/discription1"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_done_black_24dp" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

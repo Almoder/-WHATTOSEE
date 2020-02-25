@@ -16,12 +16,10 @@ public class ShareFragment extends Fragment {
         String textToSend="some text";
         getFragmentManager().popBackStack();
         intent.putExtra(Intent.EXTRA_TEXT, textToSend);
-        try
-        {
+        try {
             startActivity(Intent.createChooser(intent, "Описание действия"));
         }
-        catch (android.content.ActivityNotFoundException ex)
-        {
+        catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(getActivity().getApplicationContext(), "Some error", Toast.LENGTH_SHORT).show();
         }
         System.gc();
