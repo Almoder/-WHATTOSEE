@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Cast extends AppCompatActivity {
 
-    private List<Items> states = new ArrayList();
+    private List<Items_shop> states = new ArrayList();
     private AdView adView;
     ListView countriesList;
     @Override
@@ -31,7 +31,7 @@ public class Cast extends AppCompatActivity {
         // получаем элемент ListView
         countriesList = (ListView) findViewById(R.id.countriesList1);
         // создаем адаптер
-        StateAdapter stateAdapter = new StateAdapter(this, R.layout.list_what, states);
+        ShopAdapter stateAdapter = new ShopAdapter(this, R.layout.list_shoping, states);
         // устанавливаем адаптер
         countriesList.setAdapter(stateAdapter);
         // слушатель выбора в списке
@@ -86,8 +86,8 @@ public class Cast extends AppCompatActivity {
 
     private void setInitialData(){
 
-        states.add(new Items ("Какая-то тема", "Какая-то цена", R.mipmap.ic_launcher2));
-        states.add(new Items ("Какая-то тема", "Какая-то цена", R.mipmap.ic_launcher2));
+        states.add(new Items_shop ("Какая-то тема", "Какая-то цена", R.mipmap.ic_launcher2));
+        states.add(new Items_shop ("Какая-то тема", "Какая-то цена", R.mipmap.ic_launcher2));
 
     }
 }

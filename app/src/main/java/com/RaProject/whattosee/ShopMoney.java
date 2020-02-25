@@ -30,7 +30,7 @@ public class ShopMoney extends AppCompatActivity {
     private int coinCount;
     private AdView adView1;
     private Button mBuyButton;
-    private List<Items> items = new ArrayList();
+    private List<Items_shop> items = new ArrayList();
     ListView countriesList;
     private BillingClient mBillingClient;
     private Map<String, SkuDetails> mSkuDetailsMap = new HashMap<>();
@@ -56,7 +56,7 @@ public class ShopMoney extends AppCompatActivity {
         // получаем элемент ListView
         countriesList = (ListView) findViewById(R.id.countriesList);
         // создаем адаптер
-        StateAdapter stateAdapter = new StateAdapter(this, R.layout.list_what, items);
+        ShopAdapter stateAdapter = new ShopAdapter(this, R.layout.list_shoping, items);
         // устанавливаем адаптер
         countriesList.setAdapter(stateAdapter);
 
@@ -178,10 +178,10 @@ public class ShopMoney extends AppCompatActivity {
     private void setInitialData(){
 
         //items.add(new Items ("Стальной гигант", "-", R.mipmap.ic_launcher2));
-        items.add(new Items(getString(R.string.Buy) + "500 r.a" , "0,99$", R.drawable.coin));
-        items.add(new Items(getString(R.string.Buy) + "1000 r.a", "1,39$", R.drawable.coin));
-        items.add(new Items(getString(R.string.Buy) + "5000 r.a", "4,95$", R.drawable.coin));
-        items.add(new Items(getString(R.string.Buy) + "10000 r.a", "5,94$", R.drawable.coin));
+        items.add(new Items_shop(getString(R.string.Buy) + "500 r.a" , "0,99$", R.drawable.coin));
+        items.add(new Items_shop(getString(R.string.Buy) + "1000 r.a", "1,39$", R.drawable.coin));
+        items.add(new Items_shop(getString(R.string.Buy) + "5000 r.a", "4,95$", R.drawable.coin));
+        items.add(new Items_shop(getString(R.string.Buy) + "10000 r.a", "5,94$", R.drawable.coin));
         //items.add(new Items ("Корпорация монстров", "-", R.mipmap.ic_launcher2));
         //items.add(new Items ("Труп Невесты", "-", R.mipmap.ic_launcher2));
 

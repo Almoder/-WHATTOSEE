@@ -12,7 +12,9 @@ import androidx.fragment.app.ListFragment;
 
 import com.RaProject.whattosee.Cast;
 import com.RaProject.whattosee.Items;
+import com.RaProject.whattosee.Items_shop;
 import com.RaProject.whattosee.R;
+import com.RaProject.whattosee.ShopAdapter;
 import com.RaProject.whattosee.ShopMoney;
 import com.RaProject.whattosee.StateAdapter;
 import com.RaProject.whattosee.Watch;
@@ -24,14 +26,14 @@ import java.util.List;
 public class ShopFragment extends ListFragment {
 
 
-    private List<Items> items = new ArrayList();
+    private List<Items_shop> items = new ArrayList();
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         setInitialData();
-        StateAdapter stateAdapter = new StateAdapter(getActivity(), R.layout.list_what, items);
+        ShopAdapter stateAdapter = new ShopAdapter(getActivity(), R.layout.list_shoping, items);
         setListAdapter(stateAdapter);
 
     }
@@ -104,19 +106,12 @@ public class ShopFragment extends ListFragment {
 
 
     private void setInitialData(){
-<<<<<<< HEAD
-        /*
-        items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", null, R.mipmap.ic_launcher2));
-        items.add(new Items ("Купить Темы", "Покупайте Темы за моне или деньги", null, R.mipmap.ic_launcher2));
-        items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", null, R.mipmap.ic_launcher2));
-        */
-=======
 
-        items.add(new Items ("Купить монеты", "Покупайте монеты за деньги", R.mipmap.ic_launcher2));
-        items.add(new Items ("Купить Темы", "Покупайте Темы за монеты", R.mipmap.ic_launcher2));
-        items.add(new Items ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", R.mipmap.ic_launcher2));
 
->>>>>>> MasterIntegr
+        items.add(new Items_shop ("Купить монеты", "Покупайте монеты за деньги", R.mipmap.ic_launcher2));
+        items.add(new Items_shop ("Купить Темы", "Покупайте Темы за монеты", R.mipmap.ic_launcher2));
+        items.add(new Items_shop ("Получить монеты", "Посмотрите рекламу чтоб получить монеты", R.mipmap.ic_launcher2));
+
     }
 
 }

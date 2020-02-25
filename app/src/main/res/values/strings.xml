@@ -153,7 +153,6 @@
         \n https://www.kinopoisk.ru/
         \n https://www.imdb.com/
     </string>
-<<<<<<< HEAD
 
     <!-- Жанры -->
     <string name="genre00">Биография</string>
@@ -223,8 +222,5 @@
         <item>@string/c09</item>
         <item>@string/c10</item>
     </string-array>
-
-=======
     <string name="Buy">Купить</string>
->>>>>>> MasterIntegr
 </resources>
