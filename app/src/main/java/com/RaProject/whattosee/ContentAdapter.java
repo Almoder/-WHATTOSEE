@@ -8,6 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 
 public class ContentAdapter extends ArrayAdapter<ContentContainer> {
@@ -15,12 +19,14 @@ public class ContentAdapter extends ArrayAdapter<ContentContainer> {
     private LayoutInflater inflater;
     private int layout;
     private List<ContentContainer> cont;
+    private int aType;
 
-    public ContentAdapter (Context context, int resource, List<ContentContainer> states) {
+    public ContentAdapter (Context context, int resource, List<ContentContainer> states, int aType) {
         super(context, resource, states);
         this.cont = states;
         this.layout = resource;
         this.inflater = LayoutInflater.from(context);
+        this.aType = aType;
     }
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -54,6 +60,17 @@ public class ContentAdapter extends ArrayAdapter<ContentContainer> {
         DiscView.setText("Описание: \n "+ conts.getDescription());
         CastView.setText("В ролях: " + conts.getCast());
 
+        if (aType >= 0) {
+            FloatingActionButton fab1 = view.findViewById(R.id.fab1);
+            FloatingActionButton fab2 = view.findViewById(R.id.fab2);
+            if (aType == 0){    //если Wanttosee
+                fab1.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.ic_close_black_24dp));
+            }
+            else {              //если Saw
+                fab2.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.ic_close_black_24dp));
+                fab2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fabRed));
+            }
+        }
         return view;
     }
 }
