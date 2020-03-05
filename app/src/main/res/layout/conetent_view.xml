@@ -155,7 +155,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/producer" />
         <!-- Описание: -->
-        <!-- Хочу посмотреть -->
         <TextView
             android:id="@+id/discription1"
             android:layout_width="fill_parent"
@@ -168,35 +167,33 @@
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cast" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="59dp"
-            android:layout_height="52dp"
+        <!-- Хочу посмотреть -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="65dp"
-            android:background="#2DE434B1"
-            android:tint="#00B12C52"
             android:onClick="wantOnClick"
+            app:backgroundTint="#BB2210"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintEnd_toStartOf="@+id/fab2"
             app:layout_constraintTop_toBottomOf="@+id/discription1"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_filter_center_focus_black_24dp" />
         <!-- Посмотрел -->
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="56dp"
-            android:layout_height="51dp"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="65dp"
-            android:background="#364DBE57"
-            android:tint="#009688"
             android:onClick="sawOnClick"
+            app:backgroundTint="#11BB11"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/discription1"
