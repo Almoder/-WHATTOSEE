@@ -11,12 +11,14 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,22 +29,26 @@ public class ContentActivity extends AppCompatActivity {
     private AdView adView;
     private List<ContentContainer> items = new ArrayList();
     ListView countriesList;
-    String INF, key_s;
+    String key_s;
     int IDnTF, key_i, aType;
+    Intent intent;
+    Bundle args;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        intent = getIntent();
+        args = intent.getExtras();
+        aType = args.getInt("aType");
         setContentView(R.layout.activity_content_activ);
-        ActionBar actionBar =getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         setInitialData();
         // получаем элемент ListView
         countriesList = (ListView) findViewById(R.id.countriesList);
         // создаем адаптер
-        ContentAdapter stateAdapter = new ContentAdapter(this, R.layout.conetent_view, items);
-        // устанавливаем адаптер
+        ContentAdapter stateAdapter = new ContentAdapter(this, R.layout.conetent_view, items, aType);
         countriesList.setAdapter(stateAdapter);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -50,12 +56,12 @@ public class ContentActivity extends AppCompatActivity {
         });
         adView = findViewById(R.id.ad_view3);
 
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
         // Start loading the ad in the background.
         adView.loadAd(adRequest);
         // слушатель выбора в списке
+
 
     }
 
@@ -103,11 +109,6 @@ public class ContentActivity extends AppCompatActivity {
     }
 
     private void setInitialData(){
-        Intent intent = getIntent();
-        INF = intent.getStringExtra("Part");
-        System.out.println(INF);
-        Bundle args = intent.getExtras();
-        aType = args.getInt("aType");
         key_i = args.getInt("Part");
         key_s = Integer.toString(args.getInt("Part"));
         SQLiteDatabase maindb;
@@ -156,48 +157,33 @@ public class ContentActivity extends AppCompatActivity {
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
-        switch(aType) {
-            case 0: {
+        if (aType == 0) {
                 maindb.execSQL("delete from Wanttowatch where _Key = " + key_s);
                 maindb.close();
                 helper.close();
+                finish();
                 getFragmentManager().popBackStack();
                 System.gc();
-                break;
-            }
-            case 1: {
-                try {
-                    maindb.execSQL("delete from Saw where _Key = " + key_s);
-                } catch (SQLException mSQLExcept) {
-                    throw mSQLExcept;
+        }
+        else {
+            try {
+                Cursor cursor = maindb.rawQuery("select * from Wanttowatch where _Key = " + key_s, null);
+                if (cursor.moveToFirst()) {
+                    maindb.close();
+                    helper.close();
+                    return;
                 }
-                maindb.close();
-                helper.close();
-                getFragmentManager().popBackStack();
-                System.gc();
-                break;
+            } catch (SQLException mSQLException) {
+                throw mSQLException;
             }
-            default: {
-                try {
-                    Cursor cursor = maindb.rawQuery("select * from Wanttowatch where _Key = " + key_s, null);
-                    if (cursor.moveToFirst()) {
-                        maindb.close();
-                        helper.close();
-                        return;
-                    }
-                } catch (SQLException mSQLException) {
-                    throw mSQLException;
-                }
-                maindb.execSQL("insert into Wanttowatch values (" + key_i + ")");
-                view.setEnabled(false);
-                maindb.close();
-                helper.close();
-            }
+            maindb.execSQL("insert into Wanttowatch values (" + key_i + ")");
+            view.setEnabled(false);
+            maindb.close();
+            helper.close();
         }
     }
 
     public void sawOnClick(View view) {
-        if (aType == 1) return;
         DatabaseHelper helper = new DatabaseHelper(this, "content.db");
         SQLiteDatabase maindb;
         try {
@@ -209,6 +195,15 @@ public class ContentActivity extends AppCompatActivity {
             maindb = helper.getWritableDatabase();
         } catch (SQLException mSQLException) {
             throw mSQLException;
+        }
+        if (aType == 1) {
+            maindb.execSQL("delete from Saw where _Key = " + key_s);
+            maindb.close();
+            helper.close();
+            finish();
+            getFragmentManager().popBackStack();
+            System.gc();
+            return;
         }
         try {
             Cursor cursor = maindb.rawQuery("select * from Saw where _Key = " + key_s, null);
